@@ -7,7 +7,7 @@ steps:
   args:
     - 'run'
     - 'deploy'
-    - '[nginx]'
+    - 'nginx'
     - '--image=gcr.io/cloudrun-sql/nginx'
     - '--platform=managed'
     - '--region=us-central1'
