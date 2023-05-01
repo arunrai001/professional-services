@@ -1,7 +1,7 @@
 steps:
 - name: ‘gcr.io/cloud-builders/docker’
   args: [‘build’, ‘-t’, ‘gcr.io/cloudrun-sql/nginx:latest’, ‘.’]
-- name: ‘gcr.io/cloud-builders/docker’
+- name: ‘gcr.io/cloud-builder/docker’
   args: [‘push’, ‘gcr.io/cloudrun-sql/nginx:latest’]
 - name: ‘gcr.io/cloud-builders/gcloud’
   args: [‘beta’, ‘run’, ‘deploy’, ‘nginx’, ‘ — image’, ‘gcr.io/cloudrun-sql/nginx’, ‘ — port’, ‘80’, ‘ — region’, ‘us-central1’, ‘ — platform’, ‘managed’, ‘ — allow-unauthenticated’]
