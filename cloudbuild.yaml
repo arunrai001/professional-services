@@ -3,7 +3,7 @@ steps:
   args: ['build', '-t', 'gcr.io/cloudrun-sql/nginx:latest', '.']
 - name: gcr.io/cloud-builders/docker
   args: ['push', 'gcr.io/cloudrun-sql/nginx:latest']
-- name: 'gcr.io/cloud-builders/gcloud'
+- name: gcr.io/cloud-builders/gcloud
   args:
     - 'run'
     - 'deploy'
